@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 @app.route('/products', methods = ['GET', 'POST']
     )
+
 def products():
     apiUrl = 'https://api.nutritionix.com/v1_1/search/?brand_id=51db37d0176fe9790a899db2&results=0%3A50&fields=*'
     brand_id = "51db37d0176fe9790a899db2"
