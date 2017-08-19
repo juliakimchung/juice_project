@@ -15,8 +15,6 @@ def products():
     json_object = r.json()
     my_object = json_object['hits']
     product_num = len(my_object)
-
-
     return render_template('juice.html', product_name= my_object)
 
 if __name__ == '__main__':
