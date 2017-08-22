@@ -35,7 +35,7 @@ def products():
     r = requests.get(apiUrl, params = params)
     json_object = r.json()
     my_object = json_object['hits']
-    product_num = len(my_object)
+    product_num = json_object['total_hits']
     one_ounce = 0.03
            
     for item in my_object:
