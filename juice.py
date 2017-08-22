@@ -62,7 +62,7 @@ def products():
         print(item_name)
         print(item_calorie)
         print(average_calorie)
-    return render_template('juice.html',   my_object= my_object
+    return render_template('juiceproduct.html',   my_object= my_object
         , product_number = product_num, product_name= item_name, product_calories=item_calorie,
         product_ingredient= item_ingredient, average_calorie=average_calorie)
 
