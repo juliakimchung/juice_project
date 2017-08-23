@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 
 
-@app.route('/login', methods=['GET','POST'])
+@app.route('/', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
         flash("Successfully logged in")
@@ -16,7 +16,7 @@ def login():
 
 @app.route('/logout')
 def logout():
-    response = make_response(redirect(url_for('login')))
+    response = make_response(redirect(url_for('/')))
     response.set_cookie('username', '', expires = 0)
     return response
 
@@ -29,6 +29,7 @@ def products():
     apiUrl = 'https://api.nutritionix.com/v1_1/search/?brand_id=51db37d0176fe9790a899db2&results=0%3A50&fields=*'
     brand_id = "51db37d0176fe9790a899db2"
     params = {
+
         "appId":"d04fdf17",
         "appKey":"ea36c9d8ed19793f34f0a56b78150f30",
     }
