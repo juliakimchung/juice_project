@@ -26,10 +26,12 @@ def logout():
     )
 
 def products():
-    apiUrl = 'https://api.nutritionix.com/v1_1/search/?brand_id=51db37d0176fe9790a899db2&results=0%3A50&fields=*'
+    apiUrl = 'https://api.nutritionix.com/v1_1/search'
     brand_id = "51db37d0176fe9790a899db2"
+    fields = "*"
     params = {
-
+        "brand_id": brand_id,
+        "fields":fields ,
         "appId":"d04fdf17",
         "appKey":"ea36c9d8ed19793f34f0a56b78150f30",
     }
